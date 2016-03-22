@@ -4,6 +4,11 @@ npm install
 grunt init
 grunt prod
 npm install sqlite3 --save 
-npm start
+
+ip=$(hostname -i)
+
+sed -i "s/^[ \t]*host.*/    host: \'$ip\',/" /var/lib/megam/gulp/Ghos/config.js
+sed -i "s/^[ \t]*url.*/    url: \'http:\/\/$ip:2368\',/" /var/lib/megam/gulp/Ghos/config.js
+ npm start --production
 
 
