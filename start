@@ -1,0 +1,9 @@
+#!/bin/sh
+npm install -g grunt-cli
+npm install
+grunt init
+grunt prod
+npm install sqlite3 --save 
+npm start
+
+
